@@ -1,0 +1,13 @@
+# .gitignore
+data/raw/
+data/processed/
+data/negatives/
+model/checkpoints/*.pt
+model/checkpoints/*.onnx
+*.pyc
+__pycache__/
+.venv/
+node_modules/
+.env
+dist/
+.DS_Store
