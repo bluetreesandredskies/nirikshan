@@ -1,0 +1,1 @@
+# trained model checkpoints (.pt) for Stage 1 + Stage 2 go here (weights + class_names dict) — too large for git, pulled from GitHub Releases at deploy time
