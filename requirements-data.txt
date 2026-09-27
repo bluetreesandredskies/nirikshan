@@ -1,0 +1,17 @@
+# Requirements for the Nirikshan data-preparation pipeline
+# (data/download_sources.py, data/ita_estimation.py,
+#  data/generate_stage1_negatives.py, data/prepare_dataset.py, data/sampler.py)
+#
+# Install with:
+#   pip install -r requirements-data.txt
+
+isic-cli==8.0.2          # ISIC Archive / ISIC 2020 / BCN20000 programmatic download
+pandas==2.2.2            # manifest handling, stratification, summary stats
+numpy==1.26.4            # pixel array math for ITA estimation
+Pillow==10.3.0            # image I/O, LANCZOS resize, cropping
+scikit-image==0.23.2     # rgb2lab for ITA (CIELAB) conversion
+scikit-learn==1.4.2      # stratified train/val/test split
+imagehash==4.3.1         # perceptual hashing for dataset dedup
+tqdm==4.66.4              # progress bars in every script
+torch==2.3.0              # WeightedRandomSampler (sampler.py only; not needed
+                           # for download/ita/negatives/prepare scripts)
