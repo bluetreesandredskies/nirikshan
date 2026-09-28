@@ -1,0 +1,175 @@
+{
+  "stage1": {
+    "ran_this_session": true,
+    "class_names": [
+      "no_lesion",
+      "lesion_present"
+    ],
+    "best_epoch": 2,
+    "best_val_macro_f1": 0.8739926124916051,
+    "epochs": [
+      {
+        "epoch": 1,
+        "train_loss": 0.14749182650008705,
+        "train_macro_f1": 0.9326486580270006,
+        "val_loss": 0.029539641638719267,
+        "val_macro_f1": 0.810479797979798,
+        "img_per_sec": 199.66617899608113,
+        "checkpoint_local": "/content/checkpoints/stage1_epoch1.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage1_epoch1.pt"
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.011201889762063051,
+        "train_macro_f1": 0.9940594735251241,
+        "val_loss": 0.011596521061987972,
+        "val_macro_f1": 0.8739926124916051,
+        "img_per_sec": 213.78307117253092,
+        "checkpoint_local": "/content/checkpoints/stage1_epoch2.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage1_epoch2.pt"
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.0032609176308405494,
+        "train_macro_f1": 0.9974059489940279,
+        "val_loss": 0.023400049037191867,
+        "val_macro_f1": 0.8691938997821351,
+        "img_per_sec": 212.74904910230026,
+        "checkpoint_local": "/content/checkpoints/stage1_epoch3.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage1_epoch3.pt"
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.00478117657929757,
+        "train_macro_f1": 0.9969921368356461,
+        "val_loss": 0.015309519228244849,
+        "val_macro_f1": 0.8626296522269676,
+        "img_per_sec": 202.75872408600452,
+        "checkpoint_local": "/content/checkpoints/stage1_epoch4.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage1_epoch4.pt"
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.002048495591536333,
+        "train_macro_f1": 0.9977487473345652,
+        "val_loss": 0.020711174694480184,
+        "val_macro_f1": 0.8466511960535341,
+        "img_per_sec": 212.25049092392248,
+        "checkpoint_local": "/content/checkpoints/stage1_epoch5.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage1_epoch5.pt"
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.0032213767709103626,
+        "train_macro_f1": 0.9975158802177859,
+        "val_loss": 0.03038579155594671,
+        "val_macro_f1": 0.8197473340378518,
+        "img_per_sec": 214.48256468637544,
+        "checkpoint_local": "/content/checkpoints/stage1_epoch6.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage1_epoch6.pt"
+      }
+    ]
+  },
+  "stage2": {
+    "ran_this_session": true,
+    "class_names": [
+      "squamous_cell_carcinoma",
+      "actinic_keratosis",
+      "nevus",
+      "seborrheic_keratosis"
+    ],
+    "best_epoch": 8,
+    "best_val_macro_f1": 0.7271797328084382,
+    "epochs": [
+      {
+        "epoch": 1,
+        "train_loss": 1.7568539206310623,
+        "train_macro_f1": 0.46416111973742,
+        "val_loss": 1.143684376893149,
+        "val_macro_f1": 0.5337149307337763,
+        "img_per_sec": 217.09496298280226,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch1.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch1.pt"
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.9265555043714605,
+        "train_macro_f1": 0.6102400158117163,
+        "val_loss": 0.8758949380765259,
+        "val_macro_f1": 0.6190199416167376,
+        "img_per_sec": 195.71801532109754,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch2.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch2.pt"
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.6746889681186641,
+        "train_macro_f1": 0.6923908702236813,
+        "val_loss": 0.8134183590640804,
+        "val_macro_f1": 0.6364942172205594,
+        "img_per_sec": 215.4476426580015,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch3.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch3.pt"
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.5631936681916553,
+        "train_macro_f1": 0.7420166887167073,
+        "val_loss": 0.7583605622301799,
+        "val_macro_f1": 0.6816605116322105,
+        "img_per_sec": 214.04153968335905,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch4.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch4.pt"
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.4673854732894815,
+        "train_macro_f1": 0.7789224445013242,
+        "val_loss": 0.7371779941297233,
+        "val_macro_f1": 0.6778805083824456,
+        "img_per_sec": 207.83203776948775,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch5.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch5.pt"
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.4026716577034379,
+        "train_macro_f1": 0.8083263476858004,
+        "val_loss": 0.7618349674641887,
+        "val_macro_f1": 0.7041703918941687,
+        "img_per_sec": 208.18084506860913,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch6.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch6.pt"
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.3472149422866567,
+        "train_macro_f1": 0.8402181004744443,
+        "val_loss": 0.7432933387781933,
+        "val_macro_f1": 0.7076291572327219,
+        "img_per_sec": 209.7960375364694,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch7.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch7.pt"
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.28647128989621257,
+        "train_macro_f1": 0.8600345954724724,
+        "val_loss": 0.7326562871555607,
+        "val_macro_f1": 0.7271797328084382,
+        "img_per_sec": 216.6018625291657,
+        "checkpoint_local": "/content/checkpoints/stage2_epoch8.pt",
+        "checkpoint_drive": "/content/drive/MyDrive/nirikshan/checkpoints/stage2_epoch8.pt"
+      }
+    ]
+  },
+  "dataset": {
+    "manifest_dir": "/content/resolved_manifests",
+    "n_train_rows_total": 7008,
+    "n_val_rows_total": 1501,
+    "n_test_rows_total": 1501,
+    "negative_labels_used": [
+      "no_lesion"
+    ]
+  }
+}
