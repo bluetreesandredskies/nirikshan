@@ -1,0 +1,73 @@
+{
+  "form.title": "आपका स्वास्थ्य और जोखिम इतिहास",
+  "form.intro": "इन सवालों में लगभग 90 सेकंड लगते हैं। इनसे हमें समझने में मदद मिलती है कि वर्षों में आपकी त्वचा पर क्या असर पड़ा हो सकता है। आपके जवाब आपकी फ़ोटो के साथ जोड़े जाते हैं, लेकिन अलग-अलग दिखाए जाते हैं।",
+  "form.submit": "मेरा नतीजा देखें",
+  "common.yes": "हाँ",
+  "common.no": "नहीं",
+  "common.select_placeholder": "कृपया चुनें",
+  "validation.required": "यह जवाब ज़रूरी है।",
+  "validation.out_of_range": "कृपया सही संख्या लिखें।",
+  "validation.exceeds_age": "यह आपकी उम्र से ज़्यादा नहीं हो सकता।",
+
+  "age_years.label": "आपकी उम्र कितनी है?",
+  "age_years.help": "पूरे किए गए वर्षों में उम्र।",
+
+  "fire_pot_use.label": "क्या आप शरीर के पास रखी जाने वाली अंगीठी या हीटर (कांगड़ी, सिगड़ी, अंगीठी, बुखारी) इस्तेमाल करते हैं?",
+  "fire_pot_use.help": "ये मिट्टी या धातु के बर्तन होते हैं जिनमें गरम कोयले होते हैं, और ठंड में कपड़ों के अंदर या गोद में रखे जाते हैं।",
+  "fire_pot_use.option.never": "कभी नहीं",
+  "fire_pot_use.option.past": "पहले करता/करती था, अब नहीं",
+  "fire_pot_use.option.current": "हाँ, अभी करता/करती हूँ",
+
+  "fire_pot_years.label": "आपने इसे कुल कितने वर्षों तक इस्तेमाल किया है?",
+  "fire_pot_years.help": "सभी सर्दियों को जोड़कर गिनें। कभी इस्तेमाल नहीं किया तो 0 लिखें।",
+
+  "has_burn_scar.label": "क्या आपके शरीर पर जलने का पुराना निशान है या कोई घाव जो कभी पूरी तरह ठीक नहीं हुआ?",
+  "has_burn_scar.help": "आग, गरम तरल या रसायन से जलना शामिल करें।",
+
+  "burn_scar_age_years.label": "जलना या घाव कितने साल पहले हुआ था?",
+  "burn_scar_age_years.help": "अंदाज़ा लगाकर बताना भी ठीक है।",
+
+  "burn_scar_nonhealing_ulcer.label": "क्या निशान में कोई फोड़ा, अल्सर या नई गाँठ है जो ठीक नहीं हो रही?",
+  "burn_scar_nonhealing_ulcer.help": "जैसे कोई घाव जो बार-बार खुल जाता है, आसानी से खून निकलता है या हाल में बढ़ा है।",
+
+  "water_source.label": "घर पर पीने के पानी का मुख्य स्रोत क्या है?",
+  "water_source.help": "जिसका सबसे ज़्यादा इस्तेमाल करते हैं, वह चुनें।",
+  "water_source.option.handpump_tubewell": "हैंडपंप / कम गहरा ट्यूबवेल",
+  "water_source.option.deep_borewell": "गहरा बोरवेल",
+  "water_source.option.dug_well": "कुआँ",
+  "water_source.option.piped_treated": "नल का शोधित पानी",
+  "water_source.option.bottled_or_filtered": "बोतलबंद या फ़िल्टर (RO) पानी",
+  "water_source.option.surface_water": "नदी, तालाब या नहर",
+  "water_source.option.other_unknown": "अन्य / मुझे पता नहीं",
+
+  "district.label": "आप किस ज़िले में रहते हैं?",
+  "district.help": "आपका घर का ज़िला, काम करने की जगह का नहीं।",
+
+  "state.label": "आप किस राज्य में रहते हैं?",
+  "state.help": "वैकल्पिक, लेकिन इससे सही ज़िला पहचानने में मदद मिलती है।",
+
+  "years_at_water_source.label": "आप कितने वर्षों से यह पानी पी रहे हैं?",
+  "years_at_water_source.help": "अगर पक्का न पता हो तो इस ज़िले में रहने के वर्ष लिखें।",
+
+  "outdoor_hours_per_day.label": "एक औसत दिन में आप कितने घंटे बाहर खुले में काम करते हैं?",
+  "outdoor_hours_per_day.help": "जैसे खेती, निर्माण कार्य, मछली पकड़ना, फेरी लगाना या गाड़ी चलाना। ज़्यादातर घर के अंदर काम करते हैं तो 0 लिखें।",
+
+  "outdoor_work_years.label": "आप कितने वर्षों से बाहर खुले में काम कर रहे हैं?",
+  "outdoor_work_years.help": "कभी बाहर काम नहीं किया तो 0 लिखें।",
+
+  "sun_protection.label": "बाहर रहते समय क्या आप सिर और त्वचा ढकते हैं या सनस्क्रीन लगाते हैं?",
+  "sun_protection.help": "टोपी, पगड़ी, कपड़ा, पूरी बाँह के कपड़े या सनस्क्रीन, सब गिने जाएँगे।",
+  "sun_protection.option.regular": "हाँ, नियमित रूप से",
+  "sun_protection.option.sometimes": "कभी-कभी",
+  "sun_protection.option.never": "कभी नहीं",
+
+  "family_history_skin_cancer.label": "क्या आपके माता-पिता, भाई, बहन या बच्चे को कभी त्वचा का कैंसर हुआ है?",
+  "family_history_skin_cancer.help": "पक्का न पता हो तो \"नहीं\" चुनें।",
+
+  "tobacco_use.label": "क्या आप तंबाकू का सेवन करते हैं?",
+  "tobacco_use.help": "सिगरेट, बीड़ी, हुक्का, चबाने वाला तंबाकू, गुटखा या खैनी शामिल करें।",
+  "tobacco_use.option.none": "नहीं",
+  "tobacco_use.option.smokeless": "चबाने वाला / बिना धुएँ का तंबाकू",
+  "tobacco_use.option.smoking": "धूम्रपान (सिगरेट, बीड़ी, हुक्का)",
+  "tobacco_use.option.both": "दोनों"
+}

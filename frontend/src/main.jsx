@@ -1,10 +1,7 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./styles/theme.css";
+import App from "./App.jsx";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// Offline queue / service worker registration: not built yet (Session 7b).
+createRoot(document.getElementById("root")).render(<App />);

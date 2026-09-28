@@ -1,0 +1,33 @@
+// UI strings not present in the exposure_form_*.json tables.
+export const S = {
+  en: {
+    capTitle: "Photograph the spot", capHelp: "Use good light, stay close, keep it in focus. Your photo is checked in memory and is not saved.",
+    camera: "Take photo", gallery: "Choose photo", retake: "Choose another", cont: "Continue", next: "Next", back: "Back",
+    steps: ["About you", "Heat", "Burn or wound", "Water", "Sun", "Health"],
+    consent: "With your permission, we will save a few non-identifying details from this screening (your district and state, the risk level we calculated, and which exposure types applied) so that health planners can see where risk is concentrated. We do not save your photo, name, phone number, age, or exact answers. You can still use Nirikshan if you say no, and nothing will be saved.",
+    load: { uploading: "Uploading your photo", analyzing: "Analyzing", preparing: "Preparing your report" },
+    imageRisk: "Risk from your photo", exposureRisk: "Risk from your history", because: "Because:", next_: "What to do next",
+    levels: { low: "Low", moderate: "Moderate", high: "High", unknown: "Unknown" },
+    safety: "We raised this result to be safe", prelim: "Preliminary model: early results, not a diagnosis.",
+    heatOn: "Show heatmap", heatOff: "Show plain photo", fairness: "See accuracy by skin tone", again: "Screen another photo", backBtn: "Back",
+    errNet: "Could not reach the server. Check your connection and try again.", err422: "Please check your answers and try again.",
+    errBig: "This photo is still over 10 MB. Try a smaller photo.", errImg: "This file could not be read as a photo. Use a JPEG or PNG.", errSrv: "Something went wrong on our side. Please try again.",
+    retry: "Try again", fairTitle: "Accuracy by skin tone", noData: "no data", small: "small sample", loadingFair: "Loading",
+    bins: { very_light: "Very light", light: "Light", intermediate: "Intermediate", tan: "Tan", dark: "Dark", very_dark: "Very dark", unknown: "Unknown" },
+  },
+  hi: {
+    capTitle: "निशान की फ़ोटो लें", capHelp: "अच्छी रोशनी में, पास से और साफ़ फ़ोटो लें। आपकी फ़ोटो सिर्फ़ जाँच के दौरान मेमोरी में रहती है, सहेजी नहीं जाती।",
+    camera: "फ़ोटो खींचें", gallery: "फ़ोटो चुनें", retake: "दूसरी फ़ोटो चुनें", cont: "आगे बढ़ें", next: "आगे", back: "पीछे",
+    steps: ["आपके बारे में", "अंगीठी", "जलना या घाव", "पानी", "धूप", "स्वास्थ्य"],
+    consent: "आपकी अनुमति से, हम इस जाँच की कुछ ऐसी जानकारी सहेजेंगे जिससे आपकी पहचान नहीं होती (आपका ज़िला और राज्य, हमारे द्वारा निकाला गया जोखिम स्तर, और कौन-से जोखिम प्रकार लागू हुए), ताकि स्वास्थ्य योजनाकार देख सकें कि जोखिम कहाँ केंद्रित है। हम आपकी फ़ोटो, नाम, फ़ोन नंबर, उम्र या सटीक जवाब नहीं सहेजते। मना करने पर भी आप निरीक्षण का उपयोग कर सकते हैं, और कुछ भी सहेजा नहीं जाएगा।",
+    load: { uploading: "फ़ोटो भेजी जा रही है", analyzing: "जाँच हो रही है", preparing: "रिपोर्ट तैयार हो रही है" },
+    imageRisk: "आपकी फ़ोटो से जोखिम", exposureRisk: "आपके इतिहास से जोखिम", because: "क्योंकि:", next_: "आगे क्या करें",
+    levels: { low: "कम", moderate: "मध्यम", high: "ज़्यादा", unknown: "अज्ञात" },
+    safety: "सुरक्षा के लिए हमने यह नतीजा बढ़ाया है", prelim: "प्रारंभिक मॉडल: शुरुआती नतीजे, निदान नहीं।",
+    heatOn: "हीटमैप दिखाएँ", heatOff: "सादी फ़ोटो दिखाएँ", fairness: "त्वचा के रंग के अनुसार सटीकता देखें", again: "दूसरी फ़ोटो जाँचें", backBtn: "पीछे",
+    errNet: "सर्वर तक नहीं पहुँच पाए। इंटरनेट जाँचकर फिर कोशिश करें।", err422: "कृपया अपने जवाब जाँचकर फिर कोशिश करें।",
+    errBig: "यह फ़ोटो अब भी 10 MB से बड़ी है। छोटी फ़ोटो चुनें।", errImg: "यह फ़ाइल फ़ोटो के रूप में नहीं खुली। JPEG या PNG इस्तेमाल करें।", errSrv: "हमारी तरफ़ कुछ गड़बड़ हुई। कृपया फिर कोशिश करें।",
+    retry: "फिर कोशिश करें", fairTitle: "त्वचा के रंग के अनुसार सटीकता", noData: "कोई डेटा नहीं", small: "कम नमूने", loadingFair: "लोड हो रहा है",
+    bins: { very_light: "बहुत हल्का", light: "हल्का", intermediate: "मध्यम", tan: "गेहुँआ", dark: "गहरा", very_dark: "बहुत गहरा", unknown: "अज्ञात" },
+  },
+};

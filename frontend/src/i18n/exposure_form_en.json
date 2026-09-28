@@ -1,0 +1,73 @@
+{
+  "form.title": "Your health and exposure history",
+  "form.intro": "These questions take about 90 seconds. They help us understand what may have affected your skin over the years. Your answers are combined with your photo, but are shown separately.",
+  "form.submit": "See my result",
+  "common.yes": "Yes",
+  "common.no": "No",
+  "common.select_placeholder": "Please select",
+  "validation.required": "This answer is required.",
+  "validation.out_of_range": "Please enter a valid number.",
+  "validation.exceeds_age": "This cannot be more than your age.",
+
+  "age_years.label": "How old are you?",
+  "age_years.help": "Age in completed years.",
+
+  "fire_pot_use.label": "Do you use a fire-pot or portable heater held close to the body (kangri, sigri, angithi, bukhari)?",
+  "fire_pot_use.help": "These are clay or metal pots with hot coals that people keep under clothing or on the lap in cold weather.",
+  "fire_pot_use.option.never": "Never",
+  "fire_pot_use.option.past": "I used to, but not now",
+  "fire_pot_use.option.current": "Yes, I use one now",
+
+  "fire_pot_years.label": "For how many years in total have you used it?",
+  "fire_pot_years.help": "Count all winters together. Enter 0 if you have never used one.",
+
+  "has_burn_scar.label": "Do you have an old burn scar or a wound that never fully healed?",
+  "has_burn_scar.help": "Include burns from fire, hot liquids or chemicals.",
+
+  "burn_scar_age_years.label": "How many years ago did the burn or wound happen?",
+  "burn_scar_age_years.help": "Your best estimate is fine.",
+
+  "burn_scar_nonhealing_ulcer.label": "Is there a sore, ulcer or new lump in the scar that is not healing?",
+  "burn_scar_nonhealing_ulcer.help": "For example a wound that keeps opening, bleeds easily or has grown recently.",
+
+  "water_source.label": "What is your main source of drinking water at home?",
+  "water_source.help": "Choose the one you use most often.",
+  "water_source.option.handpump_tubewell": "Hand pump / shallow tubewell",
+  "water_source.option.deep_borewell": "Deep borewell",
+  "water_source.option.dug_well": "Dug well",
+  "water_source.option.piped_treated": "Piped, treated water",
+  "water_source.option.bottled_or_filtered": "Bottled or filtered (RO) water",
+  "water_source.option.surface_water": "River, pond or canal",
+  "water_source.option.other_unknown": "Other / I do not know",
+
+  "district.label": "Which district do you live in?",
+  "district.help": "Your home district, not where you work.",
+
+  "state.label": "Which state do you live in?",
+  "state.help": "Optional, but it helps us find the correct district.",
+
+  "years_at_water_source.label": "For how many years have you been drinking this water?",
+  "years_at_water_source.help": "Or living in this district, if you are not sure.",
+
+  "outdoor_hours_per_day.label": "On an average day, how many hours do you spend working outdoors?",
+  "outdoor_hours_per_day.help": "For example farming, construction, fishing, vending or driving. Enter 0 if you mostly work indoors.",
+
+  "outdoor_work_years.label": "For how many years have you worked outdoors?",
+  "outdoor_work_years.help": "Enter 0 if you have never worked outdoors.",
+
+  "sun_protection.label": "When outdoors, do you cover your head and skin or use sunscreen?",
+  "sun_protection.help": "A hat, turban, cloth, long sleeves or sunscreen all count.",
+  "sun_protection.option.regular": "Yes, regularly",
+  "sun_protection.option.sometimes": "Sometimes",
+  "sun_protection.option.never": "Never",
+
+  "family_history_skin_cancer.label": "Has a parent, brother, sister or child ever had skin cancer?",
+  "family_history_skin_cancer.help": "Answer No if you are not sure.",
+
+  "tobacco_use.label": "Do you use tobacco?",
+  "tobacco_use.help": "Include cigarettes, bidi, hookah, chewing tobacco, gutka or khaini.",
+  "tobacco_use.option.none": "No",
+  "tobacco_use.option.smokeless": "Chewing / smokeless tobacco",
+  "tobacco_use.option.smoking": "Smoking (cigarette, bidi, hookah)",
+  "tobacco_use.option.both": "Both"
+}
