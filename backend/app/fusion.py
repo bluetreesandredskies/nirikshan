@@ -18,7 +18,7 @@ from typing import Any, Mapping
 
 # --- Safety-net thresholds (tunable constants) -------------------------------------------
 SCC_ESCALATION_THRESHOLD = 0.15  # spec: p_scc >= 15% escalates to "high"
-AK_ESCALATION_THRESHOLD = 0.10   # ESTIMATE, validate with clinical partner: spec says "slightly lower" than the SCC threshold
+AK_ESCALATION_THRESHOLD = 0.12   # ESTIMATE, validate with clinical partner: spec says "slightly lower" than the SCC threshold
 
 # "none" and "low" are the same rank; both escalate to "moderate" on the AK rule.
 _LEVEL_RANK = {"none": 0, "low": 0, "moderate": 1, "high": 2}

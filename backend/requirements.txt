@@ -1,0 +1,20 @@
+# Nirikshan backend. Merge with requirements-model.txt if it pins anything not listed here.
+# Session 9 splits this: the deployed service drops torch/torchvision/timm for onnxruntime,
+# and the test/dev tools move to their own file.
+
+# --- runtime ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+pydantic>=2.6
+pillow>=10.0
+numpy
+
+# --- model (PyTorch path; replaced by onnxruntime in Session 9) ---
+torch
+torchvision
+timm
+
+# --- tests ---
+pytest>=8.0
+httpx>=0.27

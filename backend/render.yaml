@@ -1,0 +1,25 @@
+# Render Blueprint for the free native-Python web service (no Docker, per D.1).
+# NOTE: Render only auto-detects a Blueprint at the REPO ROOT. Either copy this file there, or
+# create the service by hand in the dashboard using the same commands.
+#
+# Interim config: root dir = repo root so `model/` is importable next to `backend/`.
+# Session 9 changes this (root dir = backend/, onnxruntime, checkpoints downloaded from the
+# GitHub Release at build time) -- until then the service will fail at startup, because
+# checkpoints are gitignored and not present on Render.
+services:
+  - type: web
+    name: nirikshan-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: FRONTEND_URL
+        sync: false            # set in the dashboard to the Vercel URL
+      - key: MODEL_CHECKPOINT_DIR
+        value: model/checkpoints
+      - key: SQLITE_PATH
+        value: /tmp/nirikshan_submissions.sqlite3   # free-tier disk is ephemeral

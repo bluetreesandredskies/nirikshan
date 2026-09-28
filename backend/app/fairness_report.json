@@ -1,0 +1,55 @@
+{
+  "generated_at": null,
+  "bins": [
+    {
+      "ita_bin": "very_light",
+      "n": 0,
+      "accuracy": null,
+      "macro_f1": null,
+      "low_confidence": true
+    },
+    {
+      "ita_bin": "light",
+      "n": 0,
+      "accuracy": null,
+      "macro_f1": null,
+      "low_confidence": true
+    },
+    {
+      "ita_bin": "intermediate",
+      "n": 0,
+      "accuracy": null,
+      "macro_f1": null,
+      "low_confidence": true
+    },
+    {
+      "ita_bin": "tan",
+      "n": 0,
+      "accuracy": null,
+      "macro_f1": null,
+      "low_confidence": true
+    },
+    {
+      "ita_bin": "dark",
+      "n": 0,
+      "accuracy": null,
+      "macro_f1": null,
+      "low_confidence": true
+    },
+    {
+      "ita_bin": "very_dark",
+      "n": 0,
+      "accuracy": null,
+      "macro_f1": null,
+      "low_confidence": true
+    },
+    {
+      "ita_bin": "unknown",
+      "n": 0,
+      "accuracy": null,
+      "macro_f1": null,
+      "low_confidence": true
+    }
+  ],
+  "notes": "Placeholder: no fairness evaluation has been generated yet. Session 8 replaces this file with real per-skin-tone-bin numbers."
+}
