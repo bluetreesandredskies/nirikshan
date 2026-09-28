@@ -12,7 +12,7 @@ export const S = {
     heatOn: "Show heatmap", heatOff: "Show plain photo", fairness: "See accuracy by skin tone", again: "Screen another photo", backBtn: "Back",
     errNet: "Could not reach the server. Check your connection and try again.", err422: "Please check your answers and try again.",
     errBig: "This photo is still over 10 MB. Try a smaller photo.", errImg: "This file could not be read as a photo. Use a JPEG or PNG.", errSrv: "Something went wrong on our side. Please try again.",
-    retry: "Try again", fairTitle: "Accuracy by skin tone", noData: "no data", small: "small sample", loadingFair: "Loading",
+    retry: "Try again", queuedTitle: "Saved for later", queuedBody: "No connection right now. Your photo and answers are saved on this phone and will be sent automatically when you are back online.", pending: "waiting to send", sendNow: "Send now", sentBack: "Your saved screening has been sent.", fairTitle: "Accuracy by skin tone", noData: "no data", small: "small sample", loadingFair: "Loading",
     bins: { very_light: "Very light", light: "Light", intermediate: "Intermediate", tan: "Tan", dark: "Dark", very_dark: "Very dark", unknown: "Unknown" },
   },
   hi: {
@@ -27,7 +27,7 @@ export const S = {
     heatOn: "हीटमैप दिखाएँ", heatOff: "सादी फ़ोटो दिखाएँ", fairness: "त्वचा के रंग के अनुसार सटीकता देखें", again: "दूसरी फ़ोटो जाँचें", backBtn: "पीछे",
     errNet: "सर्वर तक नहीं पहुँच पाए। इंटरनेट जाँचकर फिर कोशिश करें।", err422: "कृपया अपने जवाब जाँचकर फिर कोशिश करें।",
     errBig: "यह फ़ोटो अब भी 10 MB से बड़ी है। छोटी फ़ोटो चुनें।", errImg: "यह फ़ाइल फ़ोटो के रूप में नहीं खुली। JPEG या PNG इस्तेमाल करें।", errSrv: "हमारी तरफ़ कुछ गड़बड़ हुई। कृपया फिर कोशिश करें।",
-    retry: "फिर कोशिश करें", fairTitle: "त्वचा के रंग के अनुसार सटीकता", noData: "कोई डेटा नहीं", small: "कम नमूने", loadingFair: "लोड हो रहा है",
+    retry: "फिर कोशिश करें", queuedTitle: "बाद के लिए सहेजा गया", queuedBody: "अभी इंटरनेट नहीं है। आपकी फ़ोटो और जवाब इसी फ़ोन में सहेजे गए हैं और इंटरनेट आते ही अपने-आप भेज दिए जाएँगे।", pending: "भेजे जाने की प्रतीक्षा में", sendNow: "अभी भेजें", sentBack: "आपकी सहेजी हुई जाँच भेज दी गई है।", fairTitle: "त्वचा के रंग के अनुसार सटीकता", noData: "कोई डेटा नहीं", small: "कम नमूने", loadingFair: "लोड हो रहा है",
     bins: { very_light: "बहुत हल्का", light: "हल्का", intermediate: "मध्यम", tan: "गेहुँआ", dark: "गहरा", very_dark: "बहुत गहरा", unknown: "अज्ञात" },
   },
 };

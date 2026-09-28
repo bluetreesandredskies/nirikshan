@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PhotoCapture from "./components/PhotoCapture.jsx";
 import ExposureIntakeForm from "./components/ExposureIntakeForm.jsx";
 import LoadingScreen from "./components/LoadingScreen.jsx";
@@ -6,9 +6,10 @@ import RiskBadge from "./components/RiskBadge.jsx";
 import GradCamOverlay from "./components/GradCamOverlay.jsx";
 import FairnessDashboard from "./pages/FairnessDashboard.jsx";
 import { postFusion } from "./api.js";
+import { enqueue, listQueued, countQueued, removeQueued } from "./offlineQueue.js";
 import { S } from "./strings.js";
 
-// phase: capture | form | uploading | analyzing | result | dashboard
+// phase: capture | form | uploading | analyzing | queued | result | dashboard
 export default function App() {
   const [lang, setLang] = useState("en");
   const [phase, setPhase] = useState("capture");
@@ -16,7 +17,11 @@ export default function App() {
   const [answers, setAnswers] = useState(null); // raw form state, kept so a failed submit doesn't lose answers
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
+  const [pending, setPending] = useState(0);
+  const [sentBack, setSentBack] = useState(false);
   const t = S[lang];
+  const flushing = useRef(false);
+  const latest = useRef({});
 
   useEffect(() => () => photo && URL.revokeObjectURL(photo.url), [photo]);
 
@@ -29,17 +34,57 @@ export default function App() {
   }
 
   async function submit(payload, consent, raw) {
-    setAnswers(raw); setError(null); setPhase("uploading");
+    setAnswers(raw); setError(null); setSentBack(false); setPhase("uploading");
+    const exposureJson = JSON.stringify(payload);
     try {
       const res = await postFusion({
-        blob: photo.blob, exposureJson: JSON.stringify(payload), consent,
+        blob: photo.blob, exposureJson, consent,
         onUploaded: () => setPhase((p) => (p === "uploading" ? "analyzing" : p)),
       });
       setResult(res); setPhase("result"); // loader unmounts the instant the response lands
-    } catch (e) { setError(msg(e)); setPhase("form"); }
+    } catch (e) {
+      if (e.kind === "network") {
+        try { await enqueue(photo.blob, exposureJson, consent); setPending(await countQueued()); setPhase("queued"); return; }
+        catch { /* IndexedDB unavailable: fall through to the normal error */ }
+      }
+      setError(msg(e)); setPhase("form");
+    }
   }
 
-  function reset() { setPhoto(null); setAnswers(null); setResult(null); setError(null); setPhase("capture"); }
+  /** Replays queued screenings (same multipart request). Only runs while the user is idle. */
+  async function flush() {
+    const p = latest.current;
+    const idle = p.phase === "queued" || (p.phase === "capture" && !p.photo);
+    if (flushing.current || !idle || !navigator.onLine) return;
+    flushing.current = true;
+    try {
+      for (const item of await listQueued()) {
+        try {
+          const res = await postFusion({ blob: item.blob, exposureJson: item.exposureJson, consent: item.consent });
+          await removeQueued(item.id);
+          setPhoto({ blob: item.blob, url: URL.createObjectURL(item.blob) });
+          setResult(res); setSentBack(true); setPhase("result");
+        } catch (e) {
+          if (e.kind === "network" || e.kind === "server") break; // try again later
+          await removeQueued(item.id); // 4xx will never succeed; drop it and tell the user
+          setError(msg(e)); setPhase("capture");
+        }
+      }
+    } finally {
+      flushing.current = false;
+      setPending(await countQueued().catch(() => 0));
+    }
+  }
+  latest.current = { phase, photo, flush };
+
+  useEffect(() => {
+    const go = () => latest.current.flush();
+    window.addEventListener("online", go);
+    return () => window.removeEventListener("online", go);
+  }, []);
+  useEffect(() => { latest.current.flush(); }, [phase]); // app start, and whenever the user returns to an idle screen
+
+  function reset() { setPhoto(null); setAnswers(null); setResult(null); setError(null); setSentBack(false); setPhase("capture"); }
 
   return (
     <div className="app">
@@ -54,6 +99,7 @@ export default function App() {
         <main key={phase === "uploading" || phase === "analyzing" ? "wait" : phase} className="page">
           {phase === "capture" && (
             <>
+              {error && <div className="err" role="alert">{error}</div>}
               <PhotoCapture lang={lang} photo={photo} onReady={setPhoto} />
               {photo && <button className="btn btn-primary" onClick={() => setPhase("form")}>{t.cont}</button>}
             </>
@@ -62,8 +108,21 @@ export default function App() {
             <ExposureIntakeForm lang={lang} initial={answers} error={error} onSubmit={submit} onBack={() => setPhase("capture")} />
           )}
           {(phase === "uploading" || phase === "analyzing") && <LoadingScreen variant={phase} lang={lang} />}
+          {phase === "queued" && (
+            <section className="card enter">
+              <div className="blobs" aria-hidden="true"><i /><i /><i /></div>
+              <h1>{t.queuedTitle}</h1>
+              <p>{t.queuedBody}</p>
+              <p className="small-note">{pending} {t.pending}</p>
+              <div className="btn-row">
+                <button className="btn btn-primary" onClick={() => latest.current.flush()}>{t.sendNow}</button>
+                <button className="btn" onClick={reset}>{t.again}</button>
+              </div>
+            </section>
+          )}
           {phase === "result" && result && (
             <>
+              {sentBack && <div className="small-note">{t.sentBack}</div>}
               <section className="card enter">
                 <GradCamOverlay photoUrl={photo.url} heatmapBase64={result.gradcam_png_base64} lang={lang} />
               </section>
